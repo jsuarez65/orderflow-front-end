@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ACÁ -->
+    <title>Administración de Maestros</title>
+    <link rel="stylesheet" href="css/masters.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <h2>Maestros</h2>
+
+            <button class="menu-item active" data-master="producto">Productos</button>
+            <button class="menu-item" data-master="cliente">Clientes</button>
+            <button class="menu-item" data-master="proveedor">Proveedores</button>
+            <button class="menu-item" data-master="usuario">Usuarios</button>
+            <button class="menu-item" data-master="rol">Roles</button>
+
+        </aside>
+
+        <main class="content">
+
+            <h1 id="titulo">Productos</h1>
+
+            <div class="toolbar">
+
+                <button class="action active" data-action="nuevo">Nuevo</button>
+                <button class="action" data-action="buscar">Buscar</button>
+                <button class="action" data-action="modificar">Modificar</button>
+                <button class="action" data-action="eliminar">Eliminar</button>
+
+            </div>
+
+            <form id="masterForm">
+                <!-- CAMPOS DE PRODUCTO -->
+                <div id="fields-producto" class="fields-container">
+                    <div class="form-group">
+                        <label for="codigo">Código Producto</label>
+                        <input type="text" id="codigo">
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <input type="text" id="descripcion">
+                    </div>
+                    <div class="form-group">
+                        <label for="sku">SKU</label>
+                        <input type="text" id="sku">
+                    </div>
+                    <div class="form-group">
+                        <label for="codigo_barras">Código de barras</label>
+                        <input type="number" id="codigo_barras">
+                    </div>
+                    <div class="form-group">
+                        <label for="stock_minimo">Stock mínimo</label>
+                        <input type="number" id="stock_minimo">
+                    </div>
+                    <div class="form-group">
+                        <label for="stock_maximo">Stock máximo</label>
+                        <input type="number" id="stock_maximo">
+                    </div>
+                </div>
+
+                <!-- CAMPOS DE CLIENTE (Ocultos por defecto) -->
+                <div id="fields-cliente" class="fields-container" style="display: none;">
+                    <div class="form-group">
+                        <label for="cuit">CUIT</label>
+                        <input type="text" id="cuit">
+                    </div>
+                    <div class="form-group">
+                        <label for="razonSocial">Razón Social</label>
+                        <input type="text" id="razonSocial">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                </div>
+
+                <button type="submit" id="btnGuardar">Guardar</button>
+            </form>
+            <p id="mensaje"></p>
+
+        </main>
+
+    </div>
+
+    <script src="js/masterProduct.js"></script>
+
+</body>
+
+</html>
