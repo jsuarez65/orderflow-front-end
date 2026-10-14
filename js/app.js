@@ -9,13 +9,14 @@ const nombresMaestros = {
     cliente: "Clientes",
     proveedor: "Proveedores",
     usuario: "Usuarios",
-    rol: "Roles"
+    rol: "Roles",
+    ciudad: "Ciudades"
 };
 
 inicializar();
 
 function inicializar() {
-    
+
     registrarEventos();
 }
 
