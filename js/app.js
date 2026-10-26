@@ -53,6 +53,12 @@ function seleccionarMaestro(event) {
         return;
     }
 
+        if (maestroActual === "cliente") {
+
+        contenedorMaestro.innerHTML = "<form-cliente></form-cliente>";
+        return;
+    }
+
     contenedorMaestro.textContent =
         `El formulario de ${nombresMaestros[maestroActual].toLowerCase()} todavía no está implementado.`;
 }
@@ -68,7 +74,7 @@ function seleccionarAccion(event) {
 
     mensaje.textContent = "";
 
-    const componente = contenedorMaestro.querySelector("form-producto");
+    const componente = contenedorMaestro.querySelector("form-producto, form-cliente");
 
     if (!componente) {
 

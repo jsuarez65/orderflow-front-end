@@ -10,50 +10,52 @@
 
 <body>
 
-<div class="layout">
+    <div class="layout">
 
-    <aside class="sidebar">
-        <h2>Maestros</h2>
+        <aside class="sidebar">
+            <h2>Maestros</h2>
 
-        <button type="button" class="menu-item active" data-master="producto">Productos</button>
+            <button type="button" class="menu-item active" data-master="producto">Productos</button>
 
-        <button type="button" class="menu-item" data-master="cliente">Clientes</button>
+            <button type="button" class="menu-item" data-master="cliente">Clientes</button>
 
-        <button type="button" class="menu-item" data-master="proveedor">Proveedores</button>
+            <button type="button" class="menu-item" data-master="proveedor">Proveedores</button>
 
-        <button type="button" class="menu-item" data-master="usuario">Usuarios</button>
+            <button type="button" class="menu-item" data-master="usuario">Usuarios</button>
 
-        <button type="button" class="menu-item" data-master="rol">Roles</button>
+            <button type="button" class="menu-item" data-master="rol">Roles</button>
 
-        <button type="button" class="menu-item" data-master="ciudad">Ciudades</button>
-    </aside>
+            <button type="button" class="menu-item" data-master="ciudad">Ciudades</button>
+        </aside>
 
-    <main class="content">
+        <main class="content">
 
-        <h1 id="titulo">Productos</h1>
+            <h1 id="titulo">Productos</h1>
 
-        <div class="toolbar">
-            <button type="button" class="action active" data-action="nuevo">Nuevo</button>
+            <div class="toolbar">
+                <button type="button" class="action active" data-action="nuevo">Nuevo</button>
 
-            <button type="button" class="action" data-action="buscar">Buscar</button>
+                <button type="button" class="action" data-action="buscar">Buscar</button>
 
-            <button type="button" class="action" data-action="modificar">Modificar</button>
+                <button type="button" class="action" data-action="modificar">Modificar</button>
 
-            <button type="button" class="action" data-action="eliminar">Eliminar</button>
-        </div>
+                <button type="button" class="action" data-action="eliminar">Eliminar</button>
+            </div>
 
-        <div id="contenedorMaestro">
-            <form-producto></form-producto>
-        </div>
+            <div id="contenedorMaestro">
+                <form-producto></form-producto>
+            </div>
 
-        <p id="mensaje" role="status" aria-live="polite"></p>
+            <p id="mensaje" role="status" aria-live="polite"></p>
 
-    </main>
+        </main>
 
-</div>
+    </div>
 
-<script src="js/components/product.js"></script>
-<script src="js/app.js"></script>
+    <script src="js/components/product.js"></script>
+    <script src="js/components/customer.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
+
 </html>
