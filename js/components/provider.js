@@ -275,7 +275,7 @@ class FormProducto extends HTMLElement {
         this.codigo_postal.disabled = false;
         this.provincia.disabled = false;
         this.localidad.disabled = false;
-        this.cuil.disabled = true;
+        this.cuil.disabled = true;//el cuil no se puede modificar por lo que se deshabilita el input para que no se pueda cambiar
 
         this.btnGuardar.textContent = "Guardar cambios";
 
@@ -324,7 +324,7 @@ class FormProducto extends HTMLElement {
         const codigo = encodeURIComponent(codigoIngresado);
 
         const response = await fetch(
-            `http://localhost:5000/master/provider/${codigo}`,
+            `http://localhost:5000/master/provider/${cuil}`,
             {
                 method: "DELETE"
             }
@@ -344,12 +344,14 @@ class FormProducto extends HTMLElement {
     }
 
     cargarDatosProveedor(proveedor) {
-        this.codigo.value = proveedor.codigo_interno ?? "";
-        this.descripcion.value = proveedor.descripcion ?? "";
-        this.sku.value = proveedor.sku ?? "";
-        this.codigoBarras.value = proveedor.codigo_barras ?? "";
-        this.stockMinimo.value = proveedor.stock_minimo ?? "";
-        this.stockMaximo.value = proveedor.stock_maximo ?? "";
+        this.cuil.value = proveedor.cuil ?? "";
+        this.razonSocial.value = proveedor.razon_social ?? "";
+        this.domicilio.value = proveedor.domicilio ?? "";
+        this.email.value = proveedor.email ?? "";
+        this.telefono.value = proveedor.telefono ?? "";
+        this.codigoPostal.value = proveedor.codigo_postal ?? "";
+        this.provincia.value = proveedor.provincia ?? "";
+        this.localidad.value = proveedor.localidad ?? "";
     }
 
     limpiarFormulario() {
