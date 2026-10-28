@@ -1,0 +1,37 @@
+<div id="cityContainer">
+
+    <form id="cityForm" style="display: block;">
+        <div class="form-group">
+            <label for="archivoExcel">Cargar Archivo Excel para nuevos Códigos Postales</label>
+            <input id="archivoExcel" name="archivoExcel" type="file" accept=".xlsx,.xls" required>
+        </div>
+        
+        <p></p>
+        <button id="btnCargar" type="submit">Cargar Códigos Postales</button>
+    </form>
+
+    <form id="citySearchForm" style="display: none;">
+        <div class="form-group">
+            <label for="buscarPostalCode">Código Postal</label>
+            <input id="buscarPostalCode" name="buscarPostalCode" type="text">
+        </div>
+
+        <button id="btnBuscar" type="submit">Buscar</button>
+    </form>
+
+    <div id="resultadosBusqueda" style="display: none; margin-top: 20px;">
+        <h3>Resultados de la Búsqueda</h3>
+        <table id="tablaResultados" border="1" style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Código Postal</th>
+                    <th>Nombre de Ciudad</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyResultados">
+            </tbody>
+        </table>
+    </div>
+
+</div>
